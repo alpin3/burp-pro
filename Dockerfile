@@ -3,7 +3,7 @@ MAINTAINER kost - https://github.com/kost
 
 ENV JYTHON_VERSION 2.7.2
 
-RUN apk --update --no-cache add openssl ca-certificates ttf-dejavu curl
+RUN apk --update --no-cache add openssl ca-certificates ttf-dejavu curl bash
 RUN mkdir -p /opt/burp /work
 RUN adduser -D -s /bin/sh user user && chown -R user /work
 RUN curl -L "http://search.maven.org/remotecontent?filepath=org/python/jython-installer/${JYTHON_VERSION}/jython-installer-${JYTHON_VERSION}.jar" -o jython_installer-${JYTHON_VERSION}.jar && \
